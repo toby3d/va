@@ -8,6 +8,10 @@ $max_columns: 16
     display: block
     grid-column: 1
 
+    @for $i from 1 through $max_columns
+      &_size_#{$i}
+        grid-column: auto / span #{$i}
+
   &__row
     display: grid
     grid-column: auto / span $max_columns
