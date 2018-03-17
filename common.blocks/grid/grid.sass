@@ -7,3 +7,8 @@ $max_columns: 16
   &__column
     display: block
     grid-column: 1
+
+  &__row
+    display: grid
+    grid-column: auto / span $max_columns
+    grid-template-columns: repeat($max_columns, 1fr)
