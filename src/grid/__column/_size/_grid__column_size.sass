@@ -1,0 +1,4 @@
+@if $max_columns > 2
+  @for $i from 2 through ($max_columns - 1)
+    .grid__column_size_#{$i}
+      grid-column: auto / span #{$i}
