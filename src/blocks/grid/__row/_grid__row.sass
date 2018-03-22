@@ -1,0 +1,14 @@
+.grid__row
+  display: inline-grid
+  grid-column: auto / span $max_columns
+  grid-template-columns: repeat($max_columns, 1fr)
+
+@import '_extra-small/grid__row_extra-small_only'
+
+@import '_small/grid__row_small_only'
+
+@import '_medium/grid__row_medium_only'
+
+@import '_large/grid__row_large_only'
+
+@import '_extra-large/grid__row_extra-large_only'
