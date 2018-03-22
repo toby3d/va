@@ -1,0 +1,4 @@
+@if $max_columns > 2
+  @for $i from 1 through ($max_columns)
+    .grid__column_wide_#{$i}
+      grid-column: span #{$i}
