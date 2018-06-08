@@ -1,4 +1,5 @@
 # VA [![discord](https://discordapp.com/api/guilds/208605007744860163/widget.png)](https://discord.gg/jGXCk5m)
+## [Repo moved to GitLab](https://gitlab.com/toby3d/va)
 
 [![License](https://img.shields.io/npm/l/express.svg?maxAge=2592000)](LICENSE.md)
 [![Patreon](https://img.shields.io/badge/support-patreon-E6461A.svg?maxAge=2592000)](https://www.patreon.com/toby3d)
