@@ -1,0 +1,2 @@
+{{- $script := partialCached "va/script" . | fingerprint "sha512" -}}
+<script src="{{ $script.RelPermalink | absURL }}" async defer></script>

@@ -1,0 +1,16 @@
+.imposter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imposter_container {
+  overflow: auto;
+  max-width: calc(100% - (var(--imposter-margin) * 2));
+  max-height: calc(100% - (var(--imposter-margin) * 2));
+}
+
+.imposter_fixed {
+  position: fixed;
+}

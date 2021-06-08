@@ -1,0 +1,4 @@
+{{- $style := partialCached "va/style" . | fingerprint "sha512" -}}
+<link rel="preload stylesheet" as="style" href="{{ $style.RelPermalink | absURL }}" type="text/css" integrity="{{ $style.Data.Integrity }}" importance="high">
+{{- $script := partialCached "va/script" . | fingerprint "sha512" -}}
+<link rel="preload" as="script" href="{{ $script.RelPermalink | absURL }}" type="text/javascript" integrity="{{ $script.Data.Integrity }}" importance="high">

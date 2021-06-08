@@ -1,0 +1,19 @@
+.icon {
+  width: 0.75em;
+  width: 1cap;
+  height: 0.75em;
+  height: 1cap;
+}
+
+.with-icon {
+  align-items: baseline;
+  display: inline-flex;
+}
+
+.with-icon.icon_side_left > .icon {
+  margin-inline-end: var(--icon-space);
+}
+
+.with-icon.icon_side_right > .icon {
+  margin-inline-start: var(--icon-space);
+}

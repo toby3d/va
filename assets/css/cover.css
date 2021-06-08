@@ -1,0 +1,24 @@
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-height: var(--cover-min-height);
+  padding: var(--cover-space);
+}
+
+.cover > * {
+  margin-top: var(--cover-space);
+  margin-bottom: var(--cover-space);
+}
+
+.cover > :first-child:not(.cover__main) {
+  margin-top: 0;
+}
+
+.cover > :last-child:not(.cover__main) {
+  margin-bottom: 0;
+}
+
+.cover > .cover__main {
+  margin-top: auto;
+  margin-bottom: auto;
+}

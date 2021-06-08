@@ -1,0 +1,26 @@
+.sidebar {
+  overflow: visible;
+}
+
+.sidebar > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--sidebar-space) / 2 * -1);
+}
+
+.sidebar > * > * {
+  flex-basis: var(--sidebar-side-width);
+  flex-grow: 1;
+  margin: calc(var(--sidebar-space) / 2);
+}
+
+.sidebar_no-stretch > * {
+  align-items: flex-start;
+}
+
+.sidebar_side_left > * > :last-child,
+.sidebar_side_right > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(var(--sidebar-content-min) - var(--sidebar-space));
+}

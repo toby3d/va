@@ -1,0 +1,16 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack:not(.stack_recursive) > *,
+.stack.stack_recursive * {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.stack:not(.stack_recursive) > * + *,
+.stack.stack_recursive * + * {
+  margin-top: var(--stack-space);
+}

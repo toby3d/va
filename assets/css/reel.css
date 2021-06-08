@@ -1,0 +1,41 @@
+.reel {
+  display: flex;
+  height: var(--reel-height);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.reel::-webkit-scrollbar {
+  height: 1rem;
+}
+
+.reel::-webkit-scrollbar-track {
+  background-color: var(--track-color);
+}
+
+.reel::-webkit-scrollbar-thumb {
+  background-color: var(--track-color);
+  background-image: linear-gradient(var(--track-color) 0,
+    var(--track-color) 0.25rem,
+    var(--thumb-color) 0.25rem,
+    var(--thumb-color) 0.75rem,
+    var(--track-color) 0.75rem);
+}
+
+.reel > * {
+  flex: 0 0 var(--reel-item-width);
+}
+
+.reel > img {
+  flex-basis: auto;
+  height: 100%;
+  width: auto;
+}
+
+.reel > * + * {
+  margin-left: var(--reel-space);
+}
+
+.js-reel_overflowing {
+  padding-bottom: var(--reel-space);
+}

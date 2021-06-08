@@ -1,0 +1,18 @@
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc((var(--switcher-space) / 2) * -1);
+}
+
+.switcher > * > * {
+  flex-basis: calc((var(--switcher-threshold) - (100% - var(--switcher-space))) * 999);
+  flex-grow: 1;
+  margin: calc(var(--switcher-space) / 2);
+}
+
+.switcher_limit_2 > * > :nth-last-child(n+3),
+.switcher_limit_2 > * > :nth-last-child(n+3) ~ *,
+.switcher_limit_3 > * > :nth-last-child(n+4),
+.switcher_limit_3 > * > :nth-last-child(n+4) ~ * {
+  flex-basis: 100%;
+}

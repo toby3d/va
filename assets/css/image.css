@@ -1,0 +1,33 @@
+img {
+  background-color: transparent;
+  height: auto;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+img[width] {
+  width: auto;
+}
+
+img[width][height] {
+  height: auto;
+}
+
+img[src$=".svg"] {
+  height: auto;
+  max-width: none;
+  width: 100%;
+}
+
+/* TODO(toby3d): visually find img tags without alt attribute */
+img:not([alt]) {
+  filter: blur(var(--border-thick));
+}
+
+main img {
+  content-visibility: auto;
+}

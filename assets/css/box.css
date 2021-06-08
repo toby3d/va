@@ -1,0 +1,15 @@
+.box {
+  padding: var(--box-padding);
+  border-width: var(--border-thin);
+  border-style: solid;
+  border-color: currentColor;
+}
+
+.box * {
+  color: inherit;
+}
+
+.box[data-state='invert'] {
+  background-color: var(--color);
+  color: var(--background-color);
+}

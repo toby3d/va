@@ -1,0 +1,10 @@
+---
+module:
+  hugoVersion:
+    extended: false
+    min: "0.81.0"
+  mounts:
+    - source: assets
+      target: assets/va
+    - source: layouts/partials
+      target: layouts/partials/va

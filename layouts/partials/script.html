@@ -1,0 +1,12 @@
+{{- $scripts := slice -}}
+{{- range $index, $name := slice
+  "cover"
+  "reel"
+-}}
+  {{- $scripts = $scripts | append (resources.Get (printf "va/js/%s.js" $name)) -}}
+{{- end -}}
+{{- $script := $scripts | resources.Concat "va.js" -}}
+{{- if ne $.Site.IsServer true -}}
+  {{- $script = $script | minify -}}
+{{- end -}}
+{{- return $script -}}

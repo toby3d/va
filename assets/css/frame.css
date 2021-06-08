@@ -1,0 +1,31 @@
+.frame {
+  padding-bottom: calc(var(--frame-numerator) / var(--frame-denominator) * 100%);
+  position: relative;
+}
+
+@supports(aspect-ratio: var(--frame-denominator) / var(--frame-numerator)) {
+  .frame {
+    aspect-ratio: var(--frame-denominator) / var(--frame-numerator);
+    padding-bottom: var(--off);
+  }
+}
+
+.frame > * {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.frame > img,
+.frame > video,
+.frame > iframe {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}

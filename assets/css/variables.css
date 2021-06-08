@@ -1,0 +1,128 @@
+:root {
+  /* NOTE(toby3d): Booleans */
+  --on: initial;
+  --off: ;
+
+  --measure: 65ch;
+  --ratio: 1.4;
+
+  /* NOTE(toby3d): Sizes */
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
+  /* NOTE(toby3d): Border width */
+  --border-thick: var(--s-2);
+  --border-thin: var(--s-5);
+
+  /* NOTE(toby3d): Line heights */
+  --line-height-small: calc(var(--ratio) * 0.8);
+  --line-height: var(--ratio);
+
+  /* NOTE(toby3d): Lightness values of LCH */
+  --l-0: 0%;
+  --l-5: 5%;
+  --l-10: 10%;
+  --l-15: 15%;
+  --l-20: 20%;
+  --l-25: 25%;
+  --l-30: 30%;
+  --l-35: 35%;
+  --l-40: 40%;
+  --l-45: 45%;
+  --l-50: 50%;
+  --l-55: 55%;
+  --l-60: 60%;
+  --l-65: 65%;
+  --l-70: 70%;
+  --l-75: 75%;
+  --l-80: 80%;
+  --l-85: 85%;
+  --l-90: 90%;
+  --l-95: 95%;
+  --l-100: 100%;
+
+  /* NOTE(toby3d): Colors */
+  --background-color: hsl(0, 0%, var(--l-100));
+  --color: hsl(0, 0%, var(--l-0));
+  --thumb-color: hsl(0, 0%, 25%);
+  --track-color: hsl(0, 0%, 75%);
+
+  /* NOTE(toby3d): Every Layout */
+  --box-border-width: var(--border-thin);
+  --box-padding: var(--s1);
+
+  --center-gutters: var(--off);
+  --center-max: var(--measure);
+
+  --cluster-align: center;
+  --cluster-justify: center;
+  --cluster-space: var(--s0);
+
+  --cover-min-height: 0;
+  --cover-space: 0;
+
+  --frame-denominator: 16;
+  --frame-numerator: 9;
+
+  --grid-min: 250px;
+  --grid-space: var(--s1);
+
+  --icon-space: var(--s0);
+
+  --reel-height: auto;
+  --reel-item-width: auto;
+  --reel-space: var(--s0);
+
+  --sidebar-content-min: 50%;
+  --sidebar-side-width: var(--off);
+  --sidebar-space: var(--s1);
+
+  --stack-space: var(--s1);
+
+  --imposter-margin: 0px;
+
+  --switcher-threshold: var(--measure);
+  --switcher-space: var(--s1);
+}
+
+@supports (background-color: lch(100% 0 0)) and (color: lch(0% 0 0)) {
+  :root {
+    --background-color: lch(var(--l-100) 0 0);
+    --color: lch(var(--l-0) 0 0);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --l-0: 100%;
+    --l-5: 95%;
+    --l-10: 90%;
+    --l-15: 85%;
+    --l-20: 80%;
+    --l-25: 75%;
+    --l-30: 70%;
+    --l-35: 65%;
+    --l-40: 60%;
+    --l-45: 55%;
+    --l-50: 50%;
+    --l-55: 45%;
+    --l-60: 40%;
+    --l-65: 35%;
+    --l-70: 30%;
+    --l-75: 25%;
+    --l-80: 20%;
+    --l-85: 15%;
+    --l-90: 10%;
+    --l-95: 5%;
+    --l-100: 0%;
+  }
+}

@@ -1,0 +1,26 @@
+{{- $styles := slice -}}
+{{- range $index, $name := slice
+  "variables"
+  "general"
+  "image"
+  "typography"
+  "switcher"
+  "center"
+  "cover"
+  "stack"
+  "box"
+  "grid"
+  "sidebar"
+  "cluster"
+  "frame"
+  "reel"
+  "imposter"
+  "icon"
+-}}
+  {{- $styles = $styles | append (resources.Get (printf "va/css/%s.css" $name)) -}}
+{{- end -}}
+{{- $style := $styles | resources.Concat "va.css" -}}
+{{- if ne $.Site.IsServer true -}}
+  {{- $style = $style | minify -}}
+{{- end -}}
+{{- return $style -}}
