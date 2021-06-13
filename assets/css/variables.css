@@ -50,6 +50,15 @@
   --l-95: 95%;
   --l-100: 100%;
 
+  --speed-small: 100ms;
+  --speed-medium: 200ms;
+  --speed-large: 300ms;
+
+  --easing-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  /* TODO(toby3d): --easing-emphasized */
+  --easing-decelerated: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --easing-accelerated: cubic-bezier(0.4, 0.0, 1, 1);
+
   /* NOTE(toby3d): Colors */
   --background-color: hsl(0, 0%, var(--l-100));
   --color: hsl(0, 0%, var(--l-0));

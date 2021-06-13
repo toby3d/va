@@ -49,9 +49,9 @@ blockquote > q {
   cursor: pointer;
   text-decoration: underline;
   text-decoration-skip-ink: auto;
-  transition-duration: 200ms;
+  transition-duration: var(--speed-medium);
   transition-property: text-decoration-color;
-  transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+  transition-timing-function: var(--easing-standard);
 }
 
 :any-link:hover {
