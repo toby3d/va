@@ -1,5 +1,5 @@
 (function() {
-  const className = 'reel';
+  const className = 'js-reel';
   const reels = Array.from(document.querySelectorAll(`.${className}`));
   const toggleOverflowClass = (elem) => {
     elem.classList.toggle('js-reel_overflowing', elem.scrollWidth > elem.clientWidth);

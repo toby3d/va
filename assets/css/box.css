@@ -1,8 +1,8 @@
 .box {
-  padding: var(--box-padding);
-  border-width: var(--border-thin);
-  border-style: solid;
   border-color: currentColor;
+  border-style: solid;
+  border-width: var(--border-thin);
+  padding: var(--box-padding);
 }
 
 .box * {

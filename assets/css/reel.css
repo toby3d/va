@@ -3,6 +3,7 @@
   height: var(--reel-height);
   overflow-x: auto;
   overflow-y: hidden;
+  scrollbar-color: var(--thumb-color) var(--track-color);
 }
 
 .reel::-webkit-scrollbar {

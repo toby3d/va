@@ -6,19 +6,19 @@
 }
 
 .cover > * {
-  margin-top: var(--cover-space);
   margin-bottom: var(--cover-space);
+  margin-top: var(--cover-space);
 }
 
-.cover > :first-child:not(.cover__main) {
+.cover > :first-child:not(.cover__center) {
   margin-top: 0;
 }
 
-.cover > :last-child:not(.cover__main) {
+.cover > :last-child:not(.cover__center) {
   margin-bottom: 0;
 }
 
-.cover > .cover__main {
-  margin-top: auto;
+.cover > .cover__center {
   margin-bottom: auto;
+  margin-top: auto;
 }

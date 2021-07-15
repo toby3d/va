@@ -1,5 +1,5 @@
 (function() {
-  const className = 'cover';
+  const className = 'js-cover';
   const covers = Array.from(document.querySelectorAll(`.${className}`));
   const toggleVisibleData = (entries, observer) => {
     entries.forEach(entry => {

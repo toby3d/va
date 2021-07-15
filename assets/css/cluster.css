@@ -1,15 +1,7 @@
 .cluster {
-  overflow: visible;
-}
-
-.cluster > * {
+  align-items: var(--cluster-align);
   display: flex;
   flex-wrap: wrap;
+  gap: var(--cluster-space);
   justify-content: var(--cluster-justify);
-  align-items: var(--cluster-align);
-  margin: calc(var(--cluster-space) / 2 * -1);
-}
-
-.cluster > * > * {
-  margin: calc(var(--cluster-space) / 2);
 }
