@@ -1,4 +1,4 @@
-.switcher > * {
+.switcher {
   display: flex;
   flex-wrap: wrap;
   gap: var(--switcher-space);
