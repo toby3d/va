@@ -5,7 +5,7 @@
   gap: var(--sidebar-space);
 }
 
-.sidebar_no-stretch > * {
+.sidebar_no-stretch {
   align-items: flex-start;
 }
 
