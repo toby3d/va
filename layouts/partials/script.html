@@ -5,8 +5,8 @@
 -}}
   {{- $scripts = $scripts | append (resources.Get (printf "va/js/%s.js" $name)) -}}
 {{- end -}}
-{{- $script := $scripts | resources.Concat "va.js" -}}
-{{- if ne $.Site.IsServer true -}}
-  {{- $script = $script | minify -}}
+{{- $script := $scripts | resources.Concat "va.js" | js.Build "va.js" -}}
+{{- if hugo.IsProduction -}}
+  {{- $script = $script | minify | fingerprint "sha512" -}}
 {{- end -}}
 {{- return $script -}}

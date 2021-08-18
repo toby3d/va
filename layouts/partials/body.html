@@ -1,2 +1,10 @@
-{{- $script := partialCached "va/script" . | fingerprint "sha512" -}}
-<script src="{{ $script.RelPermalink | absURL }}" async defer></script>
+{{- with partialCached "va/script" . -}}
+  <script
+    async
+    crossorigin="anonymous"
+    defer
+    integrity="{{ .Data.Integrity }}"
+    src="{{ .RelPermalink | absURL }}"
+    type="{{ .MediaType.String }}">
+  </script>
+{{ end }}

@@ -20,7 +20,7 @@
   {{- $styles = $styles | append (resources.Get (printf "va/css/%s.css" $name)) -}}
 {{- end -}}
 {{- $style := $styles | resources.Concat "va.css" -}}
-{{- if ne $.Site.IsServer true -}}
-  {{- $style = $style | minify -}}
+{{- if hugo.IsProduction -}}
+  {{- $style = $style | minify | fingerprint "sha512" -}}
 {{- end -}}
 {{- return $style -}}

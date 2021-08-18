@@ -1,4 +1,22 @@
-{{- $style := partialCached "va/style" . | fingerprint "sha512" -}}
-<link rel="preload stylesheet" as="style" href="{{ $style.RelPermalink | absURL }}" type="text/css" integrity="{{ $style.Data.Integrity }}" importance="high">
-{{- $script := partialCached "va/script" . | fingerprint "sha512" -}}
-<link rel="preload" as="script" href="{{ $script.RelPermalink | absURL }}" type="text/javascript" integrity="{{ $script.Data.Integrity }}" importance="high">
+{{ with partialCached "va/style" . }}
+  <link
+    as="style"
+    crossorigin="anonymous"
+    href="{{ .RelPermalink | absURL }}"
+    importance="high"
+    integrity="{{ .Data.Integrity }}"
+    referrerpolicy="no-referrer-when-downgrade"
+    rel="preload stylesheet"
+    type="{{ .MediaType.String }}">
+{{ end }}
+{{ with partialCached "va/script" . }}
+  <link
+    as="script"
+    crossorigin="anonymous"
+    href="{{ .RelPermalink | absURL }}"
+    importance="high"
+    integrity="{{ .Data.Integrity }}"
+    referrerpolicy="no-referrer-when-downgrade"
+    rel="preload"
+    type="{{ .MediaType.String }}">
+{{ end }}
