@@ -4,7 +4,7 @@
     crossorigin="anonymous"
     defer
     integrity="{{ .Data.Integrity }}"
-    src="{{ .RelPermalink | absURL }}"
+    src="{{ .RelPermalink }}"
     type="{{ .MediaType.String }}">
   </script>
 {{ end }}
