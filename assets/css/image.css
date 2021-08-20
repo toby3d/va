@@ -23,11 +23,6 @@ img[src$=".svg"] {
   width: 100%;
 }
 
-/* TODO(toby3d): visually find img tags without alt attribute */
-img:not([alt]) {
-  filter: blur(var(--border-thick));
-}
-
 main img {
   content-visibility: auto;
 }
