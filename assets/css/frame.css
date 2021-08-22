@@ -3,13 +3,6 @@
   position: relative;
 }
 
-@supports(aspect-ratio: var(--frame-denominator) / var(--frame-numerator)) {
-  .frame {
-    aspect-ratio: var(--frame-denominator) / var(--frame-numerator);
-    padding-bottom: var(--off);
-  }
-}
-
 .frame > * {
   align-items: center;
   bottom: 0;
@@ -23,9 +16,15 @@
 }
 
 .frame > img,
-.frame > video,
-.frame > iframe {
+.frame > video {
   height: 100%;
   object-fit: cover;
   width: 100%;
+}
+
+@supports(aspect-ratio: var(--frame-denominator) / var(--frame-numerator)) {
+  .frame {
+    aspect-ratio: var(--frame-denominator) / var(--frame-numerator);
+    padding-bottom: var(--off);
+  }
 }
