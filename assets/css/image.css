@@ -9,11 +9,11 @@ picture {
   max-width: 100%;
 }
 
-img[width] {
+img:not(.icon)[width] {
   width: auto;
 }
 
-img[width][height] {
+img:not(.icon)[width][height] {
   height: auto;
 }
 

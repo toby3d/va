@@ -1,6 +1,6 @@
 .reel {
   display: flex;
-  height: var(--reel-height);
+  block-size: var(--reel-height);
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-color: var(--thumb-color) var(--track-color);
@@ -29,14 +29,14 @@
 
 .reel > img {
   flex-basis: auto;
-  height: 100%;
+  block-size: 100%;
   width: auto;
 }
 
 .reel > * + * {
-  margin-left: var(--reel-space);
+  margin-inline-start: var(--reel-space);
 }
 
 .js-reel_overflowing {
-  padding-bottom: var(--reel-space);
+  padding-block-end: var(--reel-space);
 }

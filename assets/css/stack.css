@@ -6,11 +6,10 @@
 
 .stack:not(.stack_recursive) > *,
 .stack.stack_recursive * {
-  margin-bottom: 0;
-  margin-top: 0;
+  margin-block: 0;
 }
 
 .stack:not(.stack_recursive) > * + *,
 .stack.stack_recursive * + * {
-  margin-top: var(--stack-space);
+  margin-block-start: var(--stack-space);
 }
