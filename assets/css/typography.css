@@ -11,24 +11,19 @@ h4 {
 }
 
 h1 {
-  font-size: var(--s3);
-}
-
-h2 {
   font-size: var(--s2);
 }
 
-h3 {
+h2 {
   font-size: var(--s1);
 }
 
+h3 {
+  font-size: var(--s0);
+}
+
 b,
-h1,
-h2,
 h3,
-h4,
-h5,
-h6,
 strong,
 .font-weight_bold {
   font-weight: bold;
