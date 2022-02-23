@@ -41,16 +41,19 @@ blockquote > q {
 }
 
 :any-link {
+  color:hsl(240, var(--l-100), var(--l-50));
   cursor: pointer;
   text-decoration: underline;
   text-decoration-skip-ink: auto;
+  text-decoration-color:hsl(240, var(--l-100), var(--l-50));
   transition-duration: var(--speed-medium);
-  transition-property: text-decoration-color;
+  transition-property: color, text-decoration-color;
   transition-timing-function: var(--easing-standard);
 }
 
 :any-link:hover {
-  text-decoration-color: transparent;
+  color: hsl(355, var(--l-100), var(--l-45));
+  text-decoration-color: hsl(355, var(--l-100), var(--l-45));
 }
 
 abbr {
