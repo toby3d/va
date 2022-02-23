@@ -1,3 +1,3 @@
-module gitlab.com/toby3d/va
+module source.toby3d.me/toby3d/va
 
 go 1.16

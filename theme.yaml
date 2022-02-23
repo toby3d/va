@@ -2,7 +2,7 @@
 name: "VA"
 description: "Dead simple responsive-flexible-adaptive CSS framework"
 license: "MIT"
-licenselink: "https://github.com/toby3d/va/blob/master/LICENSE"
+licenselink: "https://source.toby3d.me/toby3d/va/blob/master/LICENSE"
 homepage: "https://toby3d.me/"
 min_version: "0.81.0"
 author:
