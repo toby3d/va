@@ -1,7 +1,7 @@
-(function() {
+(function () {
   const className = 'js-reel';
   const reels = Array.from(document.querySelectorAll(`.${className}`));
-  const toggleOverflowClass = (elem) => {
+  const toggleOverflowClass = elem => {
     elem.classList.toggle('js-reel_overflowing', elem.scrollWidth > elem.clientWidth);
   };
 
@@ -15,7 +15,9 @@
     if ('MutationObserver' in window) {
       new MutationObserver(entries => {
         toggleOverflowClass(entries[0].target);
-      }).observe(reel, {childList: true});
+      }).observe(reel, {
+        childList: true
+      });
     }
   }
 })();
