@@ -94,7 +94,7 @@ table {
   border-collapse: collapse;
 }
 
-.page {
+html {
   color: var(--color);
   font-display: optional;
   font-family: system-ui,
@@ -110,7 +110,7 @@ table {
   font-size: calc(1rem + 0.333vw);
 }
 
-.page__body {
+body {
   line-height: var(--line-height);
   text-rendering: optimizeSpeed;
 }
