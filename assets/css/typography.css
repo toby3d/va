@@ -94,6 +94,16 @@ table {
   border-collapse: collapse;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background:hsl(0, 0%, var(--l-20));
+  background-image: linear-gradient(to right,
+    hsl(0, 0%, var(--l-80)),
+    hsl(0, 0%, var(--l-20)),
+    hsl(0, 0%, var(--l-80)));
+}
+
 html {
   color: var(--color);
   font-display: optional;
