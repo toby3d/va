@@ -6,29 +6,24 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: var(--line-height-small);
   hyphens: auto;
+  line-height: var(--line-height-small);
 }
 
 h1 {
-  font-size: var(--s3);
-}
-
-h2 {
   font-size: var(--s2);
 }
 
-h3 {
+h2 {
   font-size: var(--s1);
 }
 
+h3 {
+  font-size: var(--s0);
+}
+
 b,
-h1,
-h2,
 h3,
-h4,
-h5,
-h6,
 strong,
 .font-weight_bold {
   font-weight: bold;
@@ -41,26 +36,31 @@ select {
   font: inherit;
 }
 
+figcaption,
 blockquote > q {
   font-style: italic;
 }
 
 :any-link {
+  color: hsl(240, var(--l-100), var(--l-50));
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration-color: hsl(240, var(--l-100), var(--l-50));
   text-decoration-skip-ink: auto;
+  text-decoration: underline;
   transition-duration: var(--speed-medium);
-  transition-property: text-decoration-color;
+  transition-property: color,
+                       text-decoration-color;
   transition-timing-function: var(--easing-standard);
 }
 
 :any-link:hover {
-  text-decoration-color: transparent;
+  color: hsl(355, var(--l-100), var(--l-45));
+  text-decoration-color: hsl(355, var(--l-100), var(--l-45));
 }
 
 abbr {
-  text-decoration: underline;
   text-decoration-style: dotted;
+  text-decoration: underline;
 }
 
 wbr:before {
@@ -76,9 +76,9 @@ q {
   quotes: '«' '»';
 }
 
-ul:not([class]),
-ol:not([class]) {
-  margin-left: 2em;
+label,
+figcaption {
+  font-size: var(--s-1);
 }
 
 ul {
@@ -94,23 +94,33 @@ table {
   border-collapse: collapse;
 }
 
-.page {
+hr {
+  border: none;
+  height: 1px;
+  background: hsl(0, 0%, var(--l-20));
+  background-image: linear-gradient(to right,
+                    hsl(0, 0%, var(--l-80)),
+                    hsl(0, 0%, var(--l-20)),
+                    hsl(0, 0%, var(--l-80)));
+}
+
+html {
   color: var(--color);
   font-display: optional;
   font-family: system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji;
+               -apple-system,
+               BlinkMacSystemFont,
+               Segoe UI,
+               Roboto,
+               Helvetica,
+               Arial,
+               sans-serif,
+               Apple Color Emoji,
+               Segoe UI Emoji;
   font-size: calc(1rem + 0.333vw);
 }
 
-.page__body {
+body {
   line-height: var(--line-height);
   text-rendering: optimizeSpeed;
 }

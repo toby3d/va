@@ -57,61 +57,6 @@ input[type='email'] {
   padding: var(--s-3) var(--s0);
 }
 
-/* NOTE(toby3d): See https://ishadeed.com/article/styling-the-good-old-button/ */
-button,
-.button {
-  align-items: center;
-  appearance: button;
-  background-color: var(--background-color);
-  border-color: var(--background-color);
-  border-width: var(--border-thin);
-  color: currentColor;
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  min-width: var(--s5);
-  overflow: visible;
-  padding: var(--s-3) var(--s1);
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  white-space: nowrap;
-}
-
-button.with-icon:not(.icon_side_left):not(.icon_side_right),
-.button.with-icon:not(.icon_side_left):not(.icon_side_right) {
-  padding: var(--s1);
-}
-
-button[data-state='invert'],
-.button[data-state='invert'] {
-  filter: invert(100%);
-}
-
-/* NOTE(toby3d): See https://uxdesign.cc/button-design-user-interface-components-series-85243b6736c7 */
-button:hover,
-.button:hover {
-  /* TODO(toby3d) */
-}
-
-button:focus,
-.button:focus {
-  box-shadow: 0 0 var(--s-1) var(--background-color);
-  outline: none;
-}
-
-button:active,
-.button:active {
-  /* TODO(toby3d) */
-}
-
-button[disabled],
-.button[disabled] {
-  background-color: hsl(0, 0%, var(--l-30));
-  color: hsl(0, 0%, var(--l-75));
-  pointer-events: none;
-}
-
 [hidden],
 .display_none {
   display: none !important;
@@ -124,27 +69,6 @@ button[disabled],
 
 [tabindex="-1"]:focus {
  outline: none;
-}
-
-.page {
-  -webkit-overflow-scrolling: touch;
-  background-color: var(--background-color);
-  overscroll-behavior: contain;
-  scroll-behavior: smooth;
-  scrollbar-color: var(--thumb-color) var(--track-color);
-  scrollbar-width: var(--border-thick);
-  touch-action: manipulation;
-}
-
-.page__body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-.body__main {
-  flex: 1 0 auto;
 }
 
 /* NOTE(toby3d): https://allyjs.io/tutorials/hiding-elements.html#how-to-hide-elements-visually */
@@ -166,20 +90,5 @@ button[disabled],
     animation-duration: 0.01ms;
     animation-iteration-count: 1;
     transition-duration: 0.01ms;
-  }
-
-  .page {
-    scroll-behavior: auto;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    scrollbar-color: var(--track-color) var(--thumb-color);
-  }
-
-  button,
-  .button {
-    filter: invert(100%);
   }
 }
