@@ -15,9 +15,7 @@
     if ('MutationObserver' in window) {
       new MutationObserver(entries => {
         toggleOverflowClass(entries[0].target);
-      }).observe(reel, {
-        childList: true
-      });
+      }).observe(reel, { childList: true });
     }
   }
 })();

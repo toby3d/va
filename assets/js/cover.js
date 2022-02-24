@@ -8,9 +8,11 @@
   };
 
   if ('IntersectionObserver' in window) {
-    covers.forEach(t => t.setAttribute('data-observe', ''));
-
     const observer = new IntersectionObserver(toggleVisibleData);
-    covers.forEach(t => observer.observe(t));
+    
+    covers.forEach(t => {
+      t.setAttribute('data-observe', '');
+      observer.observe(t);
+    });
   }
 })();
