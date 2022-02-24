@@ -1,7 +1,7 @@
 {{- with partialCached "va/script" . -}}
   <script type="{{ .MediaType.String }}"
     src="{{ .RelPermalink }}"
-    integrity="{{ . }}"
+    integrity="{{ .Data.Integrity }}"
     crossorigin="anonymous"
     async
     defer>
