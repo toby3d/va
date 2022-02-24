@@ -81,11 +81,6 @@ figcaption {
   font-size: var(--s-1);
 }
 
-ul:not([class]),
-ol:not([class]) {
-  margin-left: 2em;
-}
-
 ul {
   list-style-type: '一 ';
 }
